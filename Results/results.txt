@@ -1,0 +1,53 @@
+Selected Columns:
+                               Name  Year  Mileage  Fuel_Petrol  Transmission
+0  Hyundai Creta 1.6 CRDi SX Option  2015    19.67            0             1
+1                      Honda Jazz V  2011    13.00            1             1
+2                 Maruti Ertiga VDI  2012    20.77            0             1
+3   Audi A4 New 2.0 TDI Multitronic  2013    15.20            0             0
+4            Nissan Micra Diesel XV  2013    23.08            0             1
+
+Filtered Data (Mileage > 20):
+   Unnamed: 0                                 Name Location  Year  Kilometers_Driven  Transmission Owner_Type  Mileage  Engine   Power  Seats  Price  Fuel_Diesel  Fuel_Electric  Fuel_Petrol  Car_Age
+2           3                    Maruti Ertiga VDI  Chennai  2012              87000             1      First    20.77  1248.0   88.76    7.0   6.00            1              0            0       13
+4           6               Nissan Micra Diesel XV   Jaipur  2013              86999             1      First    23.08  1461.0   63.10    5.0   3.50            1              0            0       12
+6           8  Volkswagen Vento Diesel Comfortline     Pune  2013              64430             1      First    20.54  1598.0  103.60    5.0   5.20            1              0            0       12
+7           9       Tata Indica Vista Quadrajet LS  Chennai  2012              65932             1     Second    22.30  1248.0   74.00    5.0   1.95            1              0            0       13
+8          10                     Maruti Ciaz Zeta    Kochi  2018              25692             1      First    21.56  1462.0  103.25    5.0   9.95            0              0            1        7
+
+Renamed Columns:
+   Unnamed: 0                              Name    Location  Year  Kilometers_Driven  Is_Manual Owner_Type  Mileage_kmpl  Engine   Power  Seats  Price  Fuel_Diesel  Fuel_Electric  Fuel_Petrol  Car_Age
+0           1  Hyundai Creta 1.6 CRDi SX Option        Pune  2015              41000          1      First         19.67  1582.0  126.20    5.0  12.50            1              0            0       10
+1           2                      Honda Jazz V     Chennai  2011              46000          1      First         13.00  1199.0   88.70    5.0   4.50            0              0            1       14
+2           3                 Maruti Ertiga VDI     Chennai  2012              87000          1      First         20.77  1248.0   88.76    7.0   6.00            1              0            0       13
+3           4   Audi A4 New 2.0 TDI Multitronic  Coimbatore  2013              40670          0     Second         15.20  1968.0  140.80    5.0  17.74            1              0            0       12
+4           6            Nissan Micra Diesel XV      Jaipur  2013              86999          1      First         23.08  1461.0   63.10    5.0   3.50            1              0            0       12
+
+New Column 'Car_Age':
+                               Name  Year  Car_Age
+0  Hyundai Creta 1.6 CRDi SX Option  2015       10
+1                      Honda Jazz V  2011       14
+2                 Maruti Ertiga VDI  2012       13
+3   Audi A4 New 2.0 TDI Multitronic  2013       12
+4            Nissan Micra Diesel XV  2013       12
+
+Sorted by Price:
+      Unnamed: 0                                         Name    Location  Year  Kilometers_Driven  Transmission Owner_Type  Mileage  Engine  Power  Seats   Price  Fuel_Diesel  Fuel_Electric  Fuel_Petrol  Car_Age
+3952        4079  Land Rover Range Rover 3.0 Diesel LWB Vogue   Hyderabad  2017              25000             0      First    13.33  2993.0  255.0    5.0  160.00            1              0            0        8
+5620        5781                   Lamborghini Gallardo Coupe       Delhi  2011               6500             0      Third     6.40  5204.0  560.0    2.0  120.00            0              0            1       14
+5752        5919                       Jaguar F Type 5.0 V8 S   Hyderabad  2015               8000             0      First    12.50  5000.0  488.1    2.0  100.00            0              0            1       10
+1457        1505              Land Rover Range Rover Sport SE       Kochi  2019              26013             0      First    12.65  2993.0  255.0    5.0   97.07            1              0            0        6
+1917        1974                           BMW 7 Series 740Li  Coimbatore  2018              28060             0      First    12.05  2979.0  320.0    5.0   93.67            0              0            1        7
+
+Summary Statistics (Mean Price by Fuel Type):
+   Fuel_Petrol  Fuel_Diesel  Fuel_Electric      Price    Mileage
+0            0            0              1  12.875000  18.900000
+1            0            1              0  12.960686  18.652661
+2            1            0              0   5.756688  17.576509
+
+Summary Statistics (Complex):
+                                           Price              
+                                            mean    min    max
+Fuel_Petrol Fuel_Diesel Fuel_Electric                         
+0           0           1              12.875000  12.75   13.0
+            1           0              12.960686   0.60  160.0
+1           0           0               5.756688   0.44  120.0
